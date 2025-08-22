@@ -1,0 +1,29 @@
+{
+  "name": "delavaz",
+  "version": "1.0.0",
+  "description": "Delavaz is a Friendly User Platform Subcategory of Beshno Created to Listening to a Vast Collections of Popular , Old and Rare Persian Song's very Quick and Easy . Including Almost Every Category of the Persian Pop Song's",
+  "main": "app.js",
+  "scripts": {
+    "test": "node ./bin/www",
+    "start": "node app.js"
+  },
+  "project-type": "webview",
+  "project-name": "Beshno.Delavaz",
+  "package-name": "Delavaz",
+  "icon": "./assets/images/icon.png",
+  "permission": [
+    "android.permission.INTERNET"
+  ],
+  "author": "mohammad hoveida",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "fs": "^0.0.1-security",
+    "internet-available": "^1.0.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
+  }
+}

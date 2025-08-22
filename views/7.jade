@@ -1,0 +1,92 @@
+doctype html
+html
+  head
+    title دل آواز
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon' href='/images/icon.png')
+    link(rel='icon' href='/images/icon.png')
+    link(rel='stylesheet' href='css/jquery.mobile-1.4.5.min.css')
+    script(src='js/jquery.js')
+    script(src='js/jquery.mobile-1.4.5.min.js')
+    link(rel='stylesheet' type='text/css' href='resources/css/main.min.css')
+    link(rel='stylesheet' href='css/jquery.toast.css')
+    script(type='text/javascript' src='js/jquery.toast.js')
+    link(rel='stylesheet' href='css/font.css')
+    link(rel='stylesheet' href='css/Style.css')
+  body(data-theme='b')
+    #p2.p2(data-role='page')
+      div(data-role='header' data-theme='b' data-position='fixed')
+        img.head(src='images/head.png' alt='')
+        a.ui-btn.ui-corner-all.ui-shadow.ui-icon-bars.ui-btn-icon-grid.ui-btn-icon-notext(href='#panel-overlay')
+      #panel-overlay(data-role='panel' data-display='overlay')
+        ul(data-role='listview')
+          img.panel(src='images/panel.png')
+          li(data-icon='info')
+            a(href='/main.jade' data-transition='slide' style='text-align: center;border: none;') صفحه اصلی
+          li(data-icon='info')
+            a(href='/bio.jade' data-transition='slide' style='text-align: center;border: none;') زندگی نامه
+          li(data-icon='info')
+            a(href='/aboutus.jade' data-transition='slide' style='text-align: center;border: none;') در باره ما
+          li(data-icon='phone')
+            a(href='https://www.instagram.com/del.avaaz/' data-transition='slide' target='blank' style='text-align: center;border: none;') صفحه ی ما 
+        br
+        br
+      div(data-role='header')
+      // /header
+      .ui-content(role='main' style='padding:0;margin-top:-2px;')
+         script(type='text/javascript').
+          if(!#{internetStatus}){
+            $.toast({
+                heading: '<h3 class="h3">!دستگاه شما به اینترنت متصل نیست</h3>',
+                text: '<a class="a" href="" onclick="window.location=document.URL;" style="margin-right: 80px;margin-top: 5px;">تلاش مجدد</a>',
+                showHideTransition: 'fade',
+                icon: 'error',
+                hideAfter: false,
+                position: 'top-center',
+            })
+          }
+        .jAudio
+          audio
+          .jAudio--ui
+            .jAudio--thumb
+            .jAudio--status-bar
+              .jAudio--details
+              .jAudio--volume-bar
+              .jAudio--progress-bar
+                .jAudio--progress-bar-wrapper
+                  .jAudio--progress-bar-played
+                    span.jAudio--progress-bar-pointer
+              .jAudio--time
+                span.jAudio--time-elapsed 00:00
+                span.jAudio--time-total 00:00
+          .bio(data-role='collapsible')
+            h3 زندگی نامه
+            p
+              | محمد نوری (زادهٔ ۱ دی ۱۳۰۸ در رشت–درگذشتهٔ ۹ مرداد ۱۳۸۹ در تهران) مدرس آواز و خواننده ایرانی بود.
+              | محمد نوری موسیقی را زبانی جهانی و از آنِ تمام اقوام و ملت‌های روی زمین می‌دانست و از همین رو به اقتباس و الهام از هنر کلاسیک غرب معتقد بود.او برنده جایزه «خورشید طلایی» (۵۰ سال صدای متفاوت و ماندگار) در سال ۷۸ از جشنواره مهر و دارای مدرک درجه یک هنری از شورای عالی ارزیابی کشور و وزارت ارشاد بود. وی در سال ۱۳۸۵ به عنوان چهرهٔ ماندگار برگزیده شد.
+              | محمد نوری ۱ دی سال ۱۳۰۸ در رشت زاده شد.وی از دانش‌آموختگان دبیرستان فیروزبهرام بود.
+              | دههٔ بیست دوران آغاز نوعی تفکر در شعر و موسیقی آوازی درمیان مردم ایران، به‌ویژه نسل جوان بود که بخشی را می‌توان متأثر از نشر و پخش وسیع‌تر موسیقی علمی و آثار فولکلور کشورهای مختلف جهان از طریق رادیو و صفحات گرامافون دانست. محمد نوری در همین سال‌ها (سنین نوجوانی) با خواندن اشعار نوینی که بر روی نغمه‌های روز مغرب‌زمین و برخی قطعات کلاسیکِ آوازی سروده شده‌بود، کار خوانندگی را آغاز کرد. او طی سال‌های بعد، با تکیه بر تحصیلات هنرستانی و دانشگاهی خود، توانست هویت مستقلی به این اندیشه و گرایش ببخشد و با اجرای آثار اساتیدی که قبلاً ذکر آنان رفت، فضای متفکرانه‌ای به گونهٔ آوازیِ خویش دهد.
+              | محمد نوری طی پنج دهه بیش از سیصد قطعهٔ آوازی اجرا کرد. او همچنین به تقریر و ترجمهٔ مقالات و سرودن اشعاری برای ترانه پرداخت. محمد نوری در سال‌های پایانی عمر چند اجرا به نفع بیماران خاص داشت. وی ترانه‌های زیادی با تم میهنی چون «جان مریم»، «شالیزار»، «واسونک»، «جمعه بازار»، «ایران» را اجرا کرده‌است.یکی از مهم‌ترین و معروف‌ترین ترانه‌های وی، جان مریم نام دارد که آهنگ زیبای آن از ساخته‌های خود نوری است.
+              | نوری در کنار تحصیل در رشته ادبیات زبان انگلیسی و رشته نمایش، آواز ایرانی را نزد اسماعیل مهرتاش آموخت. بعد از آن نزد استادان هنرستان عالی موسیقی «سیروس شهردار» و «فریدون فرزانه» و «مصطفی کمال پورتراب» رفت و از آن‌ها تئوری موسیقی، سلفژ و نوازندگی پیانو را فراگرفت. آواز کلاسیک را نزد «اولین باغچه بان» و «فاخره صبا» آموخته و شیوه آوازی خود را با تأثیر از استادانی چون «حسین اصلانی»، «ناصر حسینی» پیدا کرد و رفته رفته به شیوه منحصر به فرد خود دست یافت؛ شیوه‌ای که به سختی می‌توان آن را در زیر شاخه‌ای از شاخه‌هایی چون پاپ، کلاسیک و … گنجاند.
+              | محمد نوری فارغ‌التحصیل هنرستان تئاتر، زبان و ادبیات انگلیسی از دانشگاه تهران، و مبانی تئاتر از دانشکدهٔ علوم اجتماعی بود. او پس از انقلاب ۱۳۵۷ ایران و پس از مدتی سکوت، فعالیت هنری خود را با آلبوم «در شب سرد زمستانی» همراه با فریبرز لاچینی و احمدرضا احمدی در سال ۱۳۶۸ از سر گرفت و این همکاری بعدها با آلبوم« آوازهای سرزمین خورشید» ادامه یافت. در سال ۱۳۸۵ او از سوی سازمان صدا و سیما به عنوان چهره ماندگار موسیقی انتخاب و معرفی شد.
+              | سرانجام پس از سال‌ها مبارزه با بیماری سرطان و وخامت وضعیت جسمانی در شامگاه ۹ مرداد ۱۳۸۹ در بیمارستان جم در تهران درگذشت و در قطعه هنرمندان بهشت زهرا به خاک سپرده شد.
+          .jAudio--playlist
+          .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+            div(data-role='navbar')
+              .jAudio--controls
+                ul
+                  li
+                    button.jAudio--control.jAudio--control-prev(data-action='prev')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-play(data-action='play')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-next(data-action='next')
+                      span
+    // /content
+    .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+      div(data-role='navbar')
+    script(src='resources/js/jaudio.min.js')
+    script(src='resources/js/7.js')

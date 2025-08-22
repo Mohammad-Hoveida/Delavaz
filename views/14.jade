@@ -1,0 +1,94 @@
+doctype html
+html
+  head
+    title دل آواز
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon' href='/images/icon.png')
+    link(rel='icon' href='/images/icon.png')
+    link(rel='stylesheet' href='css/jquery.mobile-1.4.5.min.css')
+    script(src='js/jquery.js')
+    script(src='js/jquery.mobile-1.4.5.min.js')
+    link(rel='stylesheet' type='text/css' href='resources/css/main.min.css')
+    link(rel='stylesheet' href='css/jquery.toast.css')
+    script(type='text/javascript' src='js/jquery.toast.js')
+    link(rel='stylesheet' href='css/font.css')
+    link(rel='stylesheet' href='css/Style.css')
+  body(data-theme='b')
+    #p2.p2(data-role='page')
+      div(data-role='header' data-theme='b' data-position='fixed')
+        img.head(src='images/head.png' alt='')
+        a.ui-btn.ui-corner-all.ui-shadow.ui-icon-bars.ui-btn-icon-grid.ui-btn-icon-notext(href='#panel-overlay')
+      #panel-overlay(data-role='panel' data-display='overlay')
+        ul(data-role='listview')
+          img.panel(src='images/panel.png')
+          li(data-icon='info')
+            a(href='/main.jade' data-transition='slide' style='text-align: center;border: none;') صفحه اصلی
+          li(data-icon='info')
+            a(href='/bio.jade' data-transition='slide' style='text-align: center;border: none;') زندگی نامه
+          li(data-icon='info')
+            a(href='/aboutus.jade' data-transition='slide' style='text-align: center;border: none;') در باره ما
+          li(data-icon='phone')
+            a(href='https://www.instagram.com/del.avaaz/' data-transition='slide' target='blank' style='text-align: center;border: none;') صفحه ی ما 
+        br
+        br
+      div(data-role='header')
+      // /header
+      .ui-content(role='main' style='padding:0;margin-top:-2px;')
+        script(type='text/javascript').
+          if(!#{internetStatus}){
+            $.toast({
+                heading: '<h3 class="h3">!دستگاه شما به اینترنت متصل نیست</h3>',
+                text: '<a class="a" href="" onclick="window.location=document.URL;" style="margin-right: 80px;margin-top: 5px;">تلاش مجدد</a>',
+                showHideTransition: 'fade',
+                icon: 'error',
+                hideAfter: false,
+                position: 'top-center',
+            })
+          }
+        .jAudio
+          audio
+          .jAudio--ui
+            .jAudio--thumb
+            .jAudio--status-bar
+              .jAudio--details
+              .jAudio--volume-bar
+              .jAudio--progress-bar
+                .jAudio--progress-bar-wrapper
+                  .jAudio--progress-bar-played
+                    span.jAudio--progress-bar-pointer
+              .jAudio--time
+                span.jAudio--time-elapsed 00:00
+                span.jAudio--time-total 00:00
+          .bio(data-role='collapsible')
+            h3 زندگی نامه
+            p
+              | عارف عارف‌کیا (زادهٔ ۱۹ مرداد ۱۳۱۹ در نمین،اردبیل) از خوانندگان موسیقی پاپ ایرانی است که به سبک خواننده‌های اپرا می‌خواند.
+              | وی آفرینندهٔ سبک خاصی در موسیقی پاپ ایران است که پیش از آن سابقه نداشته، بعدها این سبک خاص در میان مردم به نام ته‌حنجره‌ای شهره شد. به همین خاطر، عارف با لقب «حنجره‌طلایی» شناخته می‌شد پس از آن لقب «سلطان قلبها» به او داده شد و در سال‌های اخیر نیز وی را با عنوان «یادگار عاشقی سه نسل» معرفی می‌کنند. عارف نزدیک ۸۰۰ ترانه خوانده که علاوه بر فارسی به زبان‌ها و لهجه‌های مختلف نیز می‌باشند.
+              | عارف از پدری با اصالت اردبیلی در تهران متولد گردید. مادرش متولد و ساکن باکو بود و در دانشگاه مسکو رشتهٔ دندانپزشکی را گذرانده بود؛ مادربزرگش نیز اُپرا می‌خواند و علاقهٔ فراوانی به اشعار به آذری برگردانده شدهٔ نظامی و خاقانی داشت. با شروع جنگ جهانی دوم بسیاری از خانواده‌های ایرانی به جنوب ارس (ایران) کوچانده شدند. پس از این کوچ اجباری مادرش مجبور شد دانشگاه را نیمه کاره رها کند، او با پسر عموی خود ازدواج نمود و عارف به دنیا آمد. پدرش رانندهٔ کامیون بود که در آن زمان از مشاغل سخت و مهم محسوب می‌شد.
+              | خیلی زود به دلیل اختلاف در طرز تفکر، پدر و مادرش از هم جدا شدند و عارف مجبور شد که دور از محبت مادرانه، در کنار نامادری زندگی نماید. قحطی و کمبود مواد غذایی (به دلیل وقوع جنگ جهانی دوم) و کم‌توجهی به بهداشت، باعث شیوع مریضی‌هایی در ایران شده بود که عارف نیز به دلیل همین امراض و همچنین کمبود توجه و مراقبت مادرانه، به مریضی سختی دچار شد. به همین خاطر مادرش توانست سرپرستی او را
+              | عارف خواهر و برادرهای دیگری نیز دارد ولی مادرش هیچوقت ازدواج نکرد.
+              | عارف ۳ ساله بود که زندگی تازه‌ای را در کنار خانوادهٔ مادرش (در خیابان نادری، کوچهٔ شیروانی؛ در چهارراه استانبول) شروع کرد. زبان اول در این خانواده آذری بود، حتی پدر بزرگ و مادربزرگش زبان فارسی بلد نبودند. شرایط زندگی آن‌ها از نظر مالی چندان خوب نبود اما همه تلاش می‌کردند که کانون خانواده گرم باشد،
+              | تنها دلخوشی این خانواده گوش دادن به یک رادیوی لامپی با مارک AGA بود که همیشه بر روی موج رادیو بادکوبه تنظیم شده بود. این رادیو هر روز از ساعت ۶ صبح تا شب روشن بود که مشتری اصلی آن دایی‌اش بود. از این رادیو علاوه بر آهنگ‌های آذری و غربی، گاهی اوقات نیز اُپراهای معروف اروپایی پخش می‌شد. مشهورترین خوانندگان آذری که رادیو بادکوبه صدای آن‌ها را پخش می‌کرد عبارت بودند از: رشید بهبودوف، بُلبل، گل آقا، شوکت و فاطمه. این‌ها اساتیدی بودند که صدایشان تعلیم دیده بود و هیچ‌گاه «خارج» نمی‌خوانند. همین امر باعث شد تا عارف مخفیانه از این استادان تقلید کند و ناخودآگاه «درست خواندن» و «میزان خواندن» و «کوک خواندن» را فرا بگیرد.
+              | عارف به دبستان و دبیرستان تمدن رفت که در همان کوچهٔ شیروانی قرار داشت. در ایام جوانی نیز به هنرستان صنعتی (واقع در انتهای خیابان قوام‌السلطنه؛ ۳۰ تیر کنونی) رفت و در رشتهٔ درودگری (چوب و نجاری) مشغول به تحصیل شد و دیپلمش را از آنجا گرفت. فاصلهٔ منزل تا مدرسه ۱۰–۱۵ دقیقه زمان می‌برد و او همیشه این مسیر را پیاده طی می‌کرد. مسیر همیشگی او منحصر به خودش بود: لاین دوم خیابان و بر خلاف حرکت اتوموبیل‌ها! او با خود ترانه‌های آن زمان را زمزمه می‌کرد، و این تنها کلاس تمرین برای صدایش بود.
+              | عارف علاقهٔ فراوانی به موج نوین موسیقی پیدا کرده بود و ترانه‌های اجرا شده از ویگن، محمد نوری و… را با جدّیت دنبال می‌نمود؛ به‌طوری‌که هر ترانه‌ای که از رادیو پخش می‌شد را در دفترچه‌ای به زیبایی یادداشت می‌کرد و سعی می‌کرد آن‌ها را بلافاصله اجرا نماید. از آنجایی که تصویرگر خوبی بود کنار هر ترانه تصویری از آن ترانه را می‌کشید. در این دفترچه بیش از ۵۰ ترانه وجود داشت که آن را به یکی از بهترین دوستان دوران جوانی‌اش هدیه کرد. بعد از حدود ۶۰ سال، در مهرماه ۱۳۹۲ خورشیدی خانمی اعلام کرد که یادگاری عارف هنوز نزد خانواده ایشان وجود دارد که از طریق داییِ پدرش به او رسیده‌است.
+              | عارف در دوران تحصیلش درسخوان نبود و مسائل را فرمولی محاسبه نمی‌کرد، اما خیلی باهوش بود، به‌طوری‌که باعث تعجب معلم‌ها می‌شد.
+          .jAudio--playlist
+          .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+            div(data-role='navbar')
+              .jAudio--controls
+                ul
+                  li
+                    button.jAudio--control.jAudio--control-prev(data-action='prev')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-play(data-action='play')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-next(data-action='next')
+                      span
+    // /content
+    .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+      div(data-role='navbar')
+    script(src='resources/js/jaudio.min.js')
+    script(src='resources/js/14.js')

@@ -1,0 +1,89 @@
+
+doctype html
+html
+  head
+    title دل آواز
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon' href='/images/icon.png')
+    link(rel='icon' href='/images/icon.png')
+    link(rel='stylesheet' href='css/jquery.mobile-1.4.5.min.css')
+    script(src='js/jquery.js')
+    script(src='js/jquery.mobile-1.4.5.min.js')
+    link(rel='stylesheet' type='text/css' href='resources/css/main.min.css')
+    link(rel='stylesheet' href='css/jquery.toast.css')
+    script(type='text/javascript' src='js/jquery.toast.js')
+    link(rel='stylesheet' href='css/font.css')
+    link(rel='stylesheet' href='css/Style.css')
+  body(data-theme='b')
+    #p2.p2(data-role='page')
+      div(data-role='header' data-theme='b' data-position='fixed')
+        img.head(src='images/head.png' alt='')
+        a.ui-btn.ui-corner-all.ui-shadow.ui-icon-bars.ui-btn-icon-grid.ui-btn-icon-notext(href='#panel-overlay')
+      #panel-overlay(data-role='panel' data-display='overlay')
+        ul(data-role='listview')
+          img.panel(src='images/panel.png')
+          li(data-icon='info')
+            a(href='/main.jade' data-transition='slide' style='text-align: center;border: none;') صفحه اصلی
+          li(data-icon='info')
+            a(href='/bio.jade' data-transition='slide' style='text-align: center;border: none;') زندگی نامه
+          li(data-icon='info')
+            a(href='/aboutus.jade' data-transition='slide' style='text-align: center;border: none;') در باره ما
+          li(data-icon='phone')
+            a(href='https://www.instagram.com/del.avaaz/' data-transition='slide' target='blank' style='text-align: center;border: none;') صفحه ی ما 
+        br
+        br
+      div(data-role='header')
+      // /header
+      .ui-content(role='main' style='padding:0;margin-top:-2px;')
+         script(type='text/javascript').
+          if(!#{internetStatus}){
+            $.toast({
+                heading: '<h3 class="h3">!دستگاه شما به اینترنت متصل نیست</h3>',
+                text: '<a class="a" href="" onclick="window.location=document.URL;" style="margin-right: 80px;margin-top: 5px;">تلاش مجدد</a>',
+                showHideTransition: 'fade',
+                icon: 'error',
+                hideAfter: false,
+                position: 'top-center',
+            })
+          }
+        .jAudio
+          audio
+          .jAudio--ui
+            .jAudio--thumb
+            .jAudio--status-bar
+              .jAudio--details
+              .jAudio--volume-bar
+              .jAudio--progress-bar
+                .jAudio--progress-bar-wrapper
+                  .jAudio--progress-bar-played
+                    span.jAudio--progress-bar-pointer
+              .jAudio--time
+                span.jAudio--time-elapsed 00:00
+                span.jAudio--time-total 00:00
+          .bio(data-role='collapsible')
+            h3 زندگی نامه
+            p
+              | معصومه دده‌بالا با نام هنری هایده (زادهٔ ۲۱ فروردین ۱۳۲۱ در تهران – درگذشتهٔ ۳۰ دی ۱۳۶۸ در سان فرانسیسکو، کالیفرنیا) خوانندهٔ سرشناس و بانوی آواز موسیقی سنتی و پاپ ایرانی بود. هایده دارای صدای کنترآلتو بود و بیش از دو دهه فعالیت در اجرای آواز و ترانه‌های ایرانی داشت.
+              | پیش از آنکه هایده به جرگهٔ آوازخوان‌های مشهور بپیوندد، خواهر جوانترِ او — که با نام هنری مهستی مشهور بود — جایگاهی در میان خوانندگان حرفه‌ای به‌دست آورده بود. هایده نزد استادان موسیقی ایرانی شاگردی کرد؛ وی آموزش را با علی تجویدی، مربی آواز، استاد ویلن و آهنگساز شروع کرد، تجویدی کسی بود که با دلکش نیز همکاری داشت.البته هایده پیش از آنکه تجویدی صدای وی را در اجرایی عمومی بشنود، تبحری در موسیقی یافته بود. تجویدی پس از شنیدن صدای هایده بی‌درنگ رجیستریهای نادر در عمق صدای آلتوی هایده را تشخیص داد. این رجیستریها رنج میانهٔ بسیط (پردامنه) صدای هایده را آشکار ساخت و تجویدی آموزش و یاری در آموختن مجموعهٔ موسیقی آوازی ایرانی را به هایده ارائه کرد. در آغاز صدای بسیط (پردامنه) و خوش‌میزان هایده، آمیزه‌ای از نقدهای قوی و توجه مردمی را به دست آورد.
+              | هایده، آنگونه که خود به کرات در چندین مصاحبه متذکر شده‌است، تحت تأثیر صدای پر قدرت و شیوهٔ آوازخوانی دلکش، خوانندهٔ صاحب سبک و بلندآوازهٔ آن دوران، روی به عالم موسیقی آورد. وی در سال ۱۳۴۷، فعالیت حرفه‌ای خود را با خواندن ترانه «آزاده» که اثر استادش علی تجویدی بر روی آخرین سروده رهی معیری بود آغاز کرد. اجرای ترانه «آزاده» با ارکستر بزرگ گل‌ها در رادیو تهران آغاز کار هایده بود. وی پس از اجرای چندین اثر دیگر از تجویدی و دیگر آهنگسازان بنام، از جمله همایون خرم، در برنامه گل‌ها، از نخستین سال‌های دهه ۱۳۵۰ به خواندن ترانه‌های پاپ علاقه‌مند شد که بیشتر از ساخته‌های فریدون خشنود، جهانبخش پازوکی، محمد حیدری و انوشیروان روحانی بودند..
+              | به مانند دلکش، هایده نیز با تسلط فنی موسیقایی و با شور و انرژی می‌خواند. وضعیت حنجرهٔ وی این امکان را به هایده می‌داد تا پیوستاری از ویبراتوهای دلپذیر و نغمه‌سرایی‌های آوازی، که از ملزومات آوازخوانی بود، به خواندن بپردازد. او به راحتی می‌توانست صدای بم آلتوی خود را به پایین، فولر و دارکر کنترآلتو تغییر دهد. آمیزهٔ توانایی حنجرهٔ قوی با آموخته‌روش‌های آوازخوانی، به وی صدای نادر آلتو-کنترآلتو داده بود که وی را قادر ساخته بود که آواز را پرطنین، و بافتارمند اجرا کند. علاوه بر اینها، شَم زیرکانهٔ وی در زمان‌بندی موسیقایی، جریان ریتمیک آواز ترانه، جمله‌بندی مؤثر موسیقایی و اجرای شاعرانه، وی را قادر به بروز و بیان مؤثر آنچه می‌خواند می‌کرد.
+          .jAudio--playlist
+          .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+            div(data-role='navbar')
+              .jAudio--controls
+                ul
+                  li
+                    button.jAudio--control.jAudio--control-prev(data-action='prev')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-play(data-action='play')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-next(data-action='next')
+                      span
+    // /content
+    .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+      div(data-role='navbar')
+    script(src='resources/js/jaudio.min.js')
+    script(src='resources/js/6.js')

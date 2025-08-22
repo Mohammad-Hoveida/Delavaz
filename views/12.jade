@@ -1,0 +1,94 @@
+doctype html
+html
+  head
+    title دل آواز
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon' href='/images/icon.png')
+    link(rel='icon' href='/images/icon.png')
+    link(rel='stylesheet' href='css/jquery.mobile-1.4.5.min.css')
+    script(src='js/jquery.js')
+    script(src='js/jquery.mobile-1.4.5.min.js')
+    link(rel='stylesheet' type='text/css' href='resources/css/main.min.css')
+    link(rel='stylesheet' href='css/jquery.toast.css')
+    script(type='text/javascript' src='js/jquery.toast.js')
+    link(rel='stylesheet' href='css/font.css')
+    link(rel='stylesheet' href='css/Style.css')
+  body(data-theme='b')
+    #p2.p2(data-role='page')
+      div(data-role='header' data-theme='b' data-position='fixed')
+        img.head(src='images/head.png' alt='')
+        a.ui-btn.ui-corner-all.ui-shadow.ui-icon-bars.ui-btn-icon-grid.ui-btn-icon-notext(href='#panel-overlay')
+      #panel-overlay(data-role='panel' data-display='overlay')
+        ul(data-role='listview')
+          img.panel(src='images/panel.png')
+          li(data-icon='info')
+            a(href='/main.jade' data-transition='slide' style='text-align: center;border: none;') صفحه اصلی
+          li(data-icon='info')
+            a(href='/bio.jade' data-transition='slide' style='text-align: center;border: none;') زندگی نامه
+          li(data-icon='info')
+            a(href='/aboutus.jade' data-transition='slide' style='text-align: center;border: none;') در باره ما
+          li(data-icon='phone')
+            a(href='https://www.instagram.com/del.avaaz/' data-transition='slide' target='blank' style='text-align: center;border: none;') صفحه ی ما 
+        br
+        br
+      div(data-role='header')
+      // /header
+      .ui-content(role='main' style='padding:0;margin-top:-2px;')
+        script(type='text/javascript').
+          if(!#{internetStatus}){
+            $.toast({
+                heading: '<h3 class="h3">!دستگاه شما به اینترنت متصل نیست</h3>',
+                text: '<a class="a" href="" onclick="window.location=document.URL;" style="margin-right: 80px;margin-top: 5px;">تلاش مجدد</a>',
+                showHideTransition: 'fade',
+                icon: 'error',
+                hideAfter: false,
+                position: 'top-center',
+            })
+          }
+        .jAudio
+          audio
+          .jAudio--ui
+            .jAudio--thumb
+            .jAudio--status-bar
+              .jAudio--details
+              .jAudio--volume-bar
+              .jAudio--progress-bar
+                .jAudio--progress-bar-wrapper
+                  .jAudio--progress-bar-played
+                    span.jAudio--progress-bar-pointer
+              .jAudio--time
+                span.jAudio--time-elapsed 00:00
+                span.jAudio--time-total 00:00
+          .bio(data-role='collapsible')
+            h3 زندگی نامه
+            p
+              | افتخار دده‌بالا (خدیجه) با نام هنری مهستی (زاده ۲۵ آبان ۱۳۲۵ – درگذشت ۴ تیر ۱۳۸۶) خواننده ایرانی موسیقی سنتی ومردمی و پاپ ایرانی بود. از او با نام‌هایی چون بانوی آواز گل‌ها و دل‌ها یاد می‌شود.وی کمی پیش از انقلاب از ایران خارج شد، ابتدا به بریتانیا و سپس برای همیشه به آمریکا رفت و تا زمان مرگ در آن کشور زندگی می‌کرد. بیشتر آثاری که او پس از انقلاب اجرا کرد در قالب ترانه‌های پاپ سنتی و مردمی هستند. مهستی فرزند محمد دده بالاو زینت بلغاری وعمه نادره سالاپور (گوینده شخصیت های کارتونی)وخواهر هایده، خوانندهٔ معروف ایرانی بود.
+              | مهستی با نام اصلی افتخار دده‌بالا- در ۲۵ آبان ۱۳۲۵ در تهران، خیابان ایران (خیابان عین الدوله)، زاده شد. او مدتی با کورس ناظمیان ازدواج کرد ولی از هم جدا شدند پدر وی محمد دده‌بالا و مادرش زینت بلغاری بودند. پرویز یاحقی استعداد خوانندگی او را در نوجوانی کشف کرد. خواهر او هایده نیز یکی از بزرگ‌ترین خوانندگان موسیقی پاپ سنتی ایران است. پرویز یاحقی صدای او را در یکی از مجلس‌ها به‌طور اتفاقی می‌شنود و بسیار به صدایش علاقه‌مند می‌شود و وی را به خوانندگی و موسیقی تشویق می‌کند. اکبر گلپایگانی در مصاحبه ای عنوان می‌کند که هایده و مهستی را او آموزش داده و سپس به آهنگسازان معرفی کرده‌است. هایده از مهستی بزرگ‌تر بود اما مهستی به علت تجرد، زودتر از خواهر خود پا در وادی هنر گذاشت. وی نام هنری خود را از مهستی گنجوی شاعر معروف ایرانی برگرفت.
+              | شروع کار مهستی در سن ۱۹ سالگی در برنامه گلها شماره ۴۲۰ و با خواندن ترانه‌ای به نام آن که دلم را برده خدایا ساختهٔ بیژن ترقی در سبک موسیقی کلاسیک ایرانی بود اما پس از طی زمان و همراه با گرایش عمومی برای موسیقی پاپ به خصوص در دوران پس از انقلاب ۱۳۵۷ ایران آهنگ‌هایی نیز در این سبک اجرا نمود نخستین کار وی در این زمینه ترانه بچه نشو ای دل ساخته جهانبخش پازوکی بود.
+              | در ابتدا خانواده وی نسبت به آواز خوانی او اظهار بی‌میلی می‌کردند چراکه در آن دوران خوانندگی برای یک زن مناسب تلقی نمی‌شدوخوب نبود.
+              | قبل از انقلاب همسر اول مهستی پس از مدتی زندگی با او عاشق فیروزه خواننده کوچه بازاری و از مهستی جدا و با فیروزه ازدواج کرد. مهستی علاقه زیادی به همسرش داشت و با این اتفاق بسیار غمگین شد ترانه‌های بیا خونه. بازیچه و سرانجام دلقک خطاب به کورس ناظمیان توسط مهستی خوانده شد ولی پس از مدتی با همسر دومش ازدواج کرد. مهستی دو بار ازدواج کرد و سرانجام هر دو ازدواج طلاق بود. از ازدواج اول با کورس ناظمیان صاحب دختری به نام سحر ناظمیان است. ازدواج دوم او با بهرام سنندجی صاحب کارخانهٔ کفش بود. مهستی از تنها دختر خود یعنی سحر دو نوه دختری به نام‌های ناتاشا و ناتالی داشت.
+              | در سال ۲۰۰۵ میلادی، آکادمی جهانی هنر، ادبیات و رسانه از وی برای بیش از ۴۰ سال فعالیت در زمینه موسیقی سنتیومردمی و پاپ ایرانی تقدیر به عمل آورد و به وی نشان شیر طلایی اهدا گردید.
+              | از او با احتساب گل‌های رنگارنگ حدود چهل آلبوم برجای مانده‌است.مردمی بودن و و شرکت در بسیاری از کارهای عام‌المنفعه و همچنین برخورد صمیمانه وی با مردم در کنسرتها باعث علاقه زیاد مردم به وی بود که باعث شد نسل‌هایی که بعد از مرگ وی به دنیا آمده بودند تا به امروز وی و و ترانه‌های او را به خوبی بشناسند و از آن‌ها استقبال کنند.
+              | مهستی تا حدود چهار سال بیماری خود را از اطلاع عموم مردم پنهان نگاه داشت اگرچه تحت شیمی درمانی خفیف و خطرناک قرار گرفته بود. پزشکان به او هشدار داده بودند که در صورت مداوا با دوز بالاتر که مورد نیاز شرایط اوست، امکان ایجاد مشکل در صدایش وجود خواهد داشت. با این وجود در نوروز ۱۳۸۶ بعد از چندین روز اجرای برنامه در کنسرتی که به همراه ستار و گلپا قرار بود در دبی انجام دهد به علت ظهور مجدد علایم بیماری و وخامت حال عمومی از اجرای کنسرت بازماند. وی فوراً به لس آنجلس بازگشت و در برنامه تلویزیونی در مصاحبه با نادره سالار پور، (برادر زاده خود) به همراه دخترو نوه‌های خود و پزشک خانوادگی شرکت کرد و اعلام کرد که به بیماری سرطان مبتلا است و باید پرتو درمانی شود. به همین دلیل پس از انجام مداوا به همراه دخترش به شمال کالیفرنیا رفت و در مجهزترین بیمارستان سانتا روزا که متعلق به همسر سحر بود بستری گردید.
+              | مهستی پس از انتشار آلبوم موفق «از خدا خواسته» در حالی که مشغول تهیه آلبومی دیگر با همکاری شادمهر عقیلی بود، پس از چهار سال بیماری سرطان روده بزرگ در سانتا روزای کالیفرنیا در ساعت ۷:۵۲ صبح ۴ تیر ۱۳۸۶ خورشیدی در سن ۶۰ سالگی درگذشت.
+              | پیکر وی پس از انتقال از شمال کالیفرنیا، در ساعت ۱۲:۳۰ روز جمعه ۸ تیر ۱۳۸۶ خورشیدی در گورستان وست‌وود در لس آنجلس در کنار آرامگاه خواهرش هایده و مادرشان به خاک سپرده شد. هزاران نفر از جمله خوانندگان و بازیگران برجسته ایرانی مقیم خارج از کشور و جمشید دلشاد نخستین شهردار ایرانی در ایالت کالیفرنیا و بیژن پاکزاد یکی از طراحان معروف ایرانی مقیم آمریکا در مراسم خاکسپاری وی شرکت کردند. به گفته دولت فدرال آمریکا بعد از مرلین مونرو و مایکل جکسون تشیع جنازه وی سومین مراسم بزرگ و استثنایی ایالات متحده آمریکا بود که منجر به تعطیلی کامل یک‌ساعته خیابان‌های لس آنجلس گردید.
+          .jAudio--playlist
+          .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+            div(data-role='navbar')
+              .jAudio--controls
+                ul
+                  li
+                    button.jAudio--control.jAudio--control-prev(data-action='prev')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-play(data-action='play')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-next(data-action='next')
+                      span
+    // /content
+    .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+      div(data-role='navbar')
+    script(src='resources/js/jaudio.min.js')
+    script(src='resources/js/12.js')

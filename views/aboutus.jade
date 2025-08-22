@@ -1,0 +1,85 @@
+doctype html
+html
+  head
+    title دل آواز
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon' href='/images/icon.png')
+    link(rel='icon' href='/images/icon.png')
+    link(rel='stylesheet' href='css/jquery.mobile-1.4.5.min.css')
+    script(src='js/jquery.js')
+    script(src='js/jquery.mobile-1.4.5.min.js')
+    script(type='text/javascript' src='js/jquery.toast.js')
+    link(rel='stylesheet' href='css/font.css')
+    link(rel='stylesheet' href='css/Style.css')
+  body
+    #aboutUs(data-role='page')
+      div(data-role='header' data-theme='b' data-position='fixed')
+        img.head(src='images/head.png' alt='')
+        a.ui-btn.ui-corner-all.ui-shadow.ui-icon-bars.ui-btn-icon-grid.ui-btn-icon-notext(href='#panel-overlay')
+      #panel-overlay(data-role='panel' data-display='overlay')
+        ul(data-role='listview')
+          img.panel(src='images/panel.png')
+          li(data-icon='info')
+            a(href='/main.jade' data-transition='slide' style='text-align: center;border: none;') صفحه اصلی
+          li(data-icon='info')
+            a(href='/bio.jade' data-transition='slide' style='text-align: center;border: none;') زندگی نامه
+          li(data-icon='info')
+            a(href='/aboutus.jade' data-transition='slide' style='text-align: center;border: none;') در باره ما
+          li(data-icon='phone')
+            a(href='https://www.instagram.com/del.avaaz/' data-transition='slide' target='blank' style='text-align: center;border: none;') صفحه ی ما 
+        br
+        br
+      div(data-role='header')
+      // /header
+      div(data-role='content')
+        script(type='text/javascript').
+          if(!#{internetStatus}){
+            $.toast({
+                heading: '<h3 class="h3">!دستگاه شما به اینترنت متصل نیست</h3>',
+                text: '<a class="a" href="" onclick="window.location=document.URL;" style="margin-right: 80px;margin-top: 5px;">تلاش مجدد</a>',
+                showHideTransition: 'fade',
+                icon: 'error',
+                hideAfter: false,
+                position: 'top-center',
+            })
+          }
+        p(style='width:80%;direction:rtl;display:block;margin:auto;padding-top:20px;text-align:justify;line-height: 33px;')
+          | تیم دل آواز سعی دارد با جمع آوری آرشیوی وسیع از ترانه های خاطره انگیز ایرانی و همچنین زندگی نامه ی
+          | این هنرمندان کمکی به علاقه مندان به این حوزه از هنر موسیقی کرده باشد .
+          br
+          |                 اپلیکیشن دل آواز کار رسمی خود را از سال 1397 شروع کرده است و توسط محمد هویدا توسعه پیدا میکند .
+        style(media='screen').
+          .so img{
+          width: 30px;
+          height: 30px;
+          padding: 15px;
+          text-align: center;
+          bottom:  5px;
+          }
+          #so{
+          text-align: center !important;
+          }
+        span#so
+          .so
+            br
+            a(href='instagram.com')
+              img(src='images/telegram.png' alt='')
+            a(href='instagram.com')
+              img(src='images/instagram.png' alt='')
+      style(media='screen').
+        html,body{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        }
+        .simple{
+        opacity: 0.1;
+        display: block;
+        margin: auto;
+        position: relative;
+        width: 100%;
+        float: right;
+        position: fixed;
+        bottom: 0;
+        }

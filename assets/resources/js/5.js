@@ -1,0 +1,193 @@
+
+(function(){
+
+  var t = {
+    playlist: [
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - The Third Line.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "The Third Line",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Yesteryears.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Yesteryears",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Afresh Tazeh.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Afresh Tazeh",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Call My Name.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Call My Name",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Gol Andam.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Gol Andam",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Hadise Arezoomandy.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Hadise Arezoomandy",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Hold My Hand Dastam Begir.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Hold My Hand Dastam Begir",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Ba Modaee Migooyand.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Ba Modaee Migooyand",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Deevar.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Deevar",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Ahooye Vahshi.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Ahooye Vahshi",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Yary Kami Nemibinam.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Yary Kami Nemibinam",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - To My All.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "To My All",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Till When.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Till When",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Zolfe Ashofteh.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Zolfe Ashofteh",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Days Of Song And Sorrow Roozhaye Taraneh Va Andooh.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Days Of Song And Sorrow Roozhaye Taraneh Va Andooh",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Stranger In Town.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Stranger In Town",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Zemasti Halak.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Zemasti Halak",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Sedayam Kon.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Sedayam Kon",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Shab.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Shab",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Parastoohaye Khaste.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Parastoohaye Khaste",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Yar Feat Babak Amini.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Yar Feat Babak Amini",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Kisti.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Kisti",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Yade Gozashte.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Yade Gozashte",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Dareegh.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Dareegh",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/Faramarz Aslani - Midooni Del Asire.mp3",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Midooni Del Asire",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+      {
+        file: "http://delavaz.parsaspace.com/Faramarz Aslani/دانلود-آهنگ-جدید-اگه-یه-روز-با-حضور-داریوش-از-فرامرز-اصلانی",
+        thumb: "resources/thumbs/5.jpg",
+        trackName: "Age ye roozi",
+        trackArtist: "Faramarz Aslani",
+        trackAlbum: "Single",
+      },
+    ]
+  }
+
+  $(".jAudio").jAudio(t);
+
+})();

@@ -1,0 +1,92 @@
+doctype html
+html
+  head
+    title دل آواز
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon' href='/images/icon.png')
+    link(rel='icon' href='/images/icon.png')
+    link(rel='stylesheet' href='css/jquery.mobile-1.4.5.min.css')
+    script(src='js/jquery.js')
+    script(src='js/jquery.mobile-1.4.5.min.js')
+    link(rel='stylesheet' type='text/css' href='resources/css/main.min.css')
+    link(rel='stylesheet' href='css/jquery.toast.css')
+    script(type='text/javascript' src='js/jquery.toast.js')
+    link(rel='stylesheet' href='css/font.css')
+    link(rel='stylesheet' href='css/Style.css')
+  body(data-theme='b')
+    #p2.p2(data-role='page')
+      div(data-role='header' data-theme='b' data-position='fixed')
+        img.head(src='images/head.png' alt='')
+        a.ui-btn.ui-corner-all.ui-shadow.ui-icon-bars.ui-btn-icon-grid.ui-btn-icon-notext(href='#panel-overlay')
+      #panel-overlay(data-role='panel' data-display='overlay')
+        ul(data-role='listview')
+          img.panel(src='images/panel.png')
+          li(data-icon='info')
+            a(href='/main.jade' data-transition='slide' style='text-align: center;border: none;') صفحه اصلی
+          li(data-icon='info')
+            a(href='/bio.jade' data-transition='slide' style='text-align: center;border: none;') زندگی نامه
+          li(data-icon='info')
+            a(href='/aboutus.jade' data-transition='slide' style='text-align: center;border: none;') در باره ما
+          li(data-icon='phone')
+            a(href='https://www.instagram.com/del.avaaz/' data-transition='slide' target='blank' style='text-align: center;border: none;') صفحه ی ما 
+        br
+        br
+      div(data-role='header')
+      // /header
+      .ui-content(role='main' style='padding:0;margin-top:-2px;')
+        script(type='text/javascript').
+          if(!#{internetStatus}){
+            $.toast({
+                heading: '<h3 class="h3">!دستگاه شما به اینترنت متصل نیست</h3>',
+                text: '<a class="a" href="" onclick="window.location=document.URL;" style="margin-right: 80px;margin-top: 5px;">تلاش مجدد</a>',
+                showHideTransition: 'fade',
+                icon: 'error',
+                hideAfter: false,
+                position: 'top-center',
+            })
+          }
+        .jAudio
+          audio
+          .jAudio--ui
+            .jAudio--thumb
+            .jAudio--status-bar
+              .jAudio--details
+              .jAudio--volume-bar
+              .jAudio--progress-bar
+                .jAudio--progress-bar-wrapper
+                  .jAudio--progress-bar-played
+                    span.jAudio--progress-bar-pointer
+              .jAudio--time
+                span.jAudio--time-elapsed 00:00
+                span.jAudio--time-total 00:00
+          .bio(data-role='collapsible')
+            h3 زندگی نامه
+            p
+              | غلامحسین بنان (زادهٔ ۱۵ اردیبهشت ۱۲۹۰ در تهران − درگذشتهٔ ۸ اسفند ۱۳۶۴ در تهران) خوانندهٔ موسیقی کلاسیک ایرانی است که از سال‌های ۱۳۰۶ تا سال ۱۳۴۷ در زمینهٔ موسیقی ملی ایران فعالیت داشت. او عضو شورای موسیقی رادیو، استاد آواز هنرستان موسیقی تهران و بنیان‌گذار انجمن موسیقی ایران بوده‌است. او اولین خواننده ایرانی آشنا با خط بین‌المللی موسیقی (نُت) است.
+              | به گفته خود او، فعالیتش را در سال ۱۳۰۶ آغاز کرد و فقط در جلسات خصوصی و در حضور دوستان و آشنایان به صورت حرفه‌ای آواز می‌خواند. استاد بنان از سال۱۳١٥ تا۱٣٢١در خیابان ۳۰ متری اهواز ساکن بودند و در آن سال‌ها کارمند اداره ایران بار اهواز بود
+              | او از اواخر شهریور ۱٣٢١ وارد رادیو شد و با همکاری هنرمندانی چون روح‌الله خالقی صدای او به گوش مردم رسید
+              | از سال ۱۳۲۱ صدای غلامحسین بنان، همراه با همکاری عده‌ای از هنرمندان دیگر از رادیو تهران به گوش مردم ایران رسید. روح‌الله خالقی او را در ارکستر انجمن موسیقی شرکت داد و با ارکستر شماره یک نیز همکاری را شروع کرد و از بدو شروع برنامه «گلهای رنگارنگ» بنا به دعوت داود پیرنیا همکاری داشت. بنان در طول فعالیت هنری خود، حدود ۳۵۰ آهنگ را اجرا کرد. ویژگی صدای وی زیر و بم‌ها و تحریرات صدای اوست. بنان هم به آواز قدیمی و کلاسیک ایرانی و هم به نغمات جدید و مدرن ایرانی تسلط داشت که به عنوان نمونه می‌توان تصنیف «الهه ناز» را نام برد. برخی بنان را بزرگترین اجراکننده سبک وزیری-خالقی می‌دانند. او همچنین در کنار ادیب خوانساری از اجراکنندگان آثار صبا و محجوبی بود. همچنین به مرکب‌خوانی و تلفیق شعر و موسیقی مسلط بود.
+              | در سال ۱۳۳۲ به پیشنهاد روح‌الله خالقی به اداره کل هنرهای زیبای کشور منتقل شد و به سمت استاد آواز هنرستان موسیقی ملی به کار مشغول گردید و در سال ۱۳۳۴ رئیس شورای موسیقی رادیو شد. غلامحسین بنان از ابتدا در برنامه‌های گلهای جاویدان و گلهای رنگارنگ و برگ سبز شرکت داشته و برنامه‌های متعدد و گوناگون دیگری که از این خواننده به جا مانده‌است.
+              | در این برنامه‌ها، استادان موسیقی سنتی چون روح‌الله خالقی، ابوالحسن صبا، مرتضی محجوبی، احمد عبادی، حسین تهرانی، علی تجویدی، و… با او همکاری داشته‌اند.
+              | غلامحسین بنان در غروب ۸ اسفندماه ۱۳۶۴ خورشیدی، در بیمارستان ایرانمهر تهران درگذشت و بر خلاف وصیتش که مایل بود در گورستان ظهیرالدوله به خاک سپرده شود، در دهم اسفند، در امام‌زاده طاهر کرج به خاک سپرده شد. او مدت‌ها از بیماری دستگاه گوارش و افسردگی رنج می‌برد.
+              | در پی این رویداد، مرکز سرود و آهنگ‌های انقلابی وزارت ارشاد، هنرستان سرود و آهنگ‌های انقلابی، دانشکده هنرهای زیبای دانشگاه تهران، بیمارستان ایرانمهر، محمدرضا شجریان، کاوه دیلمی، هنگامه اخوان، شهرام ناظری، ابوالحسن ورزی، کامکار، تورج نگهبان، جمشید مشایخی، عماد رام و بسیاری دیگر از هنرمندان و دوستان و یاران وی پیام‌های تسلیتی به‌طور جداگانه صادر کردند. از سال ۱۳۶۴ یعنی زمان فوت وی تا سال ۱۳۸۹ سنگ قبر بنان تعویض نگردید، سال ۱۳۸۹ به دلیل پاره‌ای از تغییرات در امام‌زاده طاهر کرج و هم‌سطح‌سازی قبور و تعویض همهٔ سنگ قبرهای نزدیک صحن، سنگ قبر بنان نیز تعویض گردید و به شکل کنونی درآمد.
+          .jAudio--playlist
+          .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+            div(data-role='navbar')
+              .jAudio--controls
+                ul
+                  li
+                    button.jAudio--control.jAudio--control-prev(data-action='prev')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-play(data-action='play')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-next(data-action='next')
+                      span
+    // /content
+    .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+      div(data-role='navbar')
+    script(src='resources/js/jaudio.min.js')
+    script(src='resources/js/16.js')

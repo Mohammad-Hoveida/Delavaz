@@ -1,0 +1,95 @@
+doctype html
+html
+  head
+    title دل آواز
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon' href='/images/icon.png')
+    link(rel='icon' href='/images/icon.png')
+    link(rel='stylesheet' href='css/jquery.mobile-1.4.5.min.css')
+    script(src='js/jquery.js')
+    script(src='js/jquery.mobile-1.4.5.min.js')
+    link(rel='stylesheet' type='text/css' href='resources/css/main.min.css')
+    link(rel='stylesheet' href='css/jquery.toast.css')
+    script(type='text/javascript' src='js/jquery.toast.js')
+    link(rel='stylesheet' href='css/font.css')
+    link(rel='stylesheet' href='css/Style.css')
+  body(data-theme='b')
+    #p2.p2(data-role='page')
+      div(data-role='header' data-theme='b' data-position='fixed')
+        img.head(src='images/head.png' alt='')
+        a.ui-btn.ui-corner-all.ui-shadow.ui-icon-bars.ui-btn-icon-grid.ui-btn-icon-notext(href='#panel-overlay')
+      #panel-overlay(data-role='panel' data-display='overlay')
+        ul(data-role='listview')
+          img.panel(src='images/panel.png')
+          li(data-icon='info')
+            a(href='/main.jade' data-transition='slide' style='text-align: center;border: none;') صفحه اصلی
+          li(data-icon='info')
+            a(href='/bio.jade' data-transition='slide' style='text-align: center;border: none;') زندگی نامه
+          li(data-icon='info')
+            a(href='/aboutus.jade' data-transition='slide' style='text-align: center;border: none;') در باره ما
+          li(data-icon='phone')
+            a(href='https://www.instagram.com/del.avaaz/' data-transition='slide' target='blank' style='text-align: center;border: none;') صفحه ی ما 
+        br
+        br
+      div(data-role='header')
+      // /header
+      .ui-content(role='main' style='padding:0;margin-top:-2px;')
+        script(type='text/javascript').
+          if(!#{internetStatus}){
+            $.toast({
+                heading: '<h3 class="h3">!دستگاه شما به اینترنت متصل نیست</h3>',
+                text: '<a class="a" href="" onclick="window.location=document.URL;" style="margin-right: 80px;margin-top: 5px;">تلاش مجدد</a>',
+                showHideTransition: 'fade',
+                icon: 'error',
+                hideAfter: false,
+                position: 'top-center',
+            })
+          }
+        .jAudio
+          audio
+          .jAudio--ui
+            .jAudio--thumb
+            .jAudio--status-bar
+              .jAudio--details
+              .jAudio--volume-bar
+              .jAudio--progress-bar
+                .jAudio--progress-bar-wrapper
+                  .jAudio--progress-bar-played
+                    span.jAudio--progress-bar-pointer
+              .jAudio--time
+                span.jAudio--time-elapsed 00:00
+                span.jAudio--time-total 00:00
+          .bio(data-role='collapsible')
+            h3 زندگی نامه
+            p
+              | کورش یغمایی (زادهٔ ۱۲ آذر ۱۳۲۵ در قوچان) آهنگساز، آواز خوان، نوازنده، تنظیم‌کنندهٔ ایرانی و نوازندهٔ چیره‌دست گیتار الکتریک و بنیان‌گذار موسیقی راک در ایران است.
+              | کورش یغمایی فراگیری موزیک را در کودکی و با ساز سنتور آغاز کرد. پس از چند سال کار در موزیک سنتی ایران، گیتار (سازی که همواره به آن عشق می‌ورزید) را برگزید و همه توان خود را برای یادگیری این ساز به کار برد. دلباختگی به گیتار چنان در منش و همه زندگی کوروش رخنه کرد که از آن هنگام تاکنون هیچگاه از هم دور نشده‌اند، گویی که کوروش و گیتار درهم تنیده شده‌اند.
+              | کورش یغمایی کار جدی خود را در سن ۱۸ سالگی با ایجاد و سرپرستی و مدیریت گروه راک اینسترومنتال (سازی و بدون خواننده) راپچرز آغاز کرد. در این هنگام بر پایه چیره‌دستی و سبک ویژه نوازندگی اش در نواختن گیتار به او لقب پنجه طلایی را داده بودند. در درازای گرفتن لیسانس جامعه‌شناسی از دانشگاه ملی همواره سرپرست و مدیر گروه راک دانشگاه ملی بود و در مسابقات هنری دانشگاه‌های ایران که در دانشگاه شیراز برگزار شد بهترین رتبه را برای دانشگاه ملی به ارمغان آورد. کوروش یغمایی هم‌زمان با گرفتن لیسانس از دانشگاه ملی، آغاز به آهنگسازی بر روی چند شعر از همکلاسی و شاعر برجسته «مهدی اخوان لنگرودی» کرد که با نام‌های گل یخ و حجم خالی به دوران حرفه‌ای موسیقی ایران راه یافت. گل یخ، برپایه داشتن استانداردهای جهانی بزودی به خارج از مرزهای ایران نفوذ کرد و در پی آن اجراهای گوناگونی در دیگر کشورهای جهان از این ترانه شکل گرفت که تا هم‌اکنون نیز ادامه دارد. این اولین باری بود که موزیک ایران وارد عرصه‌های جهانی می‌شد.
+              | پس از ۱۷ سال ممنوعیت در کار موزیک و خواندن آواز، آلبوم‌های سیب نقره‌ای، ماه و پلنگ، کابوس، آرایش خورشید و تفنگ دسته نقره و هم چنین گرگ‌های گرسنه (موسیقی فیلم) را (بدون بهره‌مندی از استودیو و حتی ابزار لازم و کافی برای ضبط) به بازار ارائه کرد که این آثار آغازی دوباره برای ادامه موزیک مدرن در ایران بود.
+              | ایوتن آلاپات سرپرست و کارشناس ارشد کمپانی معتبر Stones Throw و صاحب کمپانی Now Again در سال ۱۳۸۸ (۲۰۰۹) با کوروش یغمایی و موزیک او آشنا شد. به گفتهٔ او یغمایی پدرخواندهٔ موسیقی راک ایران و یکی از برجسته‌ترین گزینه‌ها در خاورمیانه است.
+              | در همان سال (۲۰۰۹) کمپانی Now Again آلبومی به نام زنجیر خودت را بباف (FORGE YOUR OWN CHAINS) را در آمریکا منتشر کرد که شامل پانزده قطعه از موسیقی‌دانان راک سالهای ۱۹۶۸ تا ۱۹۷۴ بود. در این آلبوم ترانهٔ حجم خالی از کوروش یغمایی تنها نمایندهٔ خاورمیانه بود. ایوتن آلاپات انتشار این آلبوم را آغازی برای کشف دوباره کوروش در غرب دانست. این گزینش برای نخستین‌بار انگیزهٔ ثبت پژوهشی موسیقی مدرن ایران و ورود رسمی آن به گسترهٔ موسیقی جهانی شد.
+              | در سال ۲۰۱۰ جشنوارهٔ معتبر موزیک RedBull که در لندن برگزار می‌شود کوروش یغمایی را برای سخنرانی، دریافت جایزه و اجرای موزیک دعوت کرد. در سال ۲۰۱۱ آلبوم مستقل کوروش با نام بازگشت از لبهٔ پرتگاه (Back From The Brink) توسط کمپانی Now Again منتشر شد. این آلبوم بهترین تک‌آهنگ‌های او درسال‌های۱۹۷۳ تا ۱۹۷۹ است که با سیستم‌های صدابرداری روز دنیا در آمریکا پالایش و با بالاترین کیفیت به صورت یک پکیج (دو صفحه ۳۳ دورLP و چهار صفحه ۴۵ دور و CD) در سراسر جهان منتشر شد. انتشار این آلبوم مورد تحسین و استقبال گسترده نشریات و سایت‌های معتبر جهان قرار گرفت.
+              | بسیاری او را موسیقی دانی جهانی و نابغهٔ موسیقی شرق دانستند. نشریه و سایت معتبر رولینگ استون (Rolling Stone)آلبوم بازگشت از لبه پرتگاه را لایق دریافت سه ستاره از چهار ستاره دانست. نشریهٔ معتبر MOJO هم آن را بهترین آلبوم ماهِ جهان معرفی کرد و چهار ستاره، امتیاز کامل، به آن داد و مجله Billboard,برجسته‌ترین مجله تخصصی موزیک، با او گفتگویی کرد. در همان سال جشنوارهٔ ترانس موزیکال (Trans Musicales), معتبرترین جشنوارهٔ موزیک در جهان، از کوروش یغمایی برای اجرا در فرانسه دعوت به عمل آورد.
+              | به باور کارشناسان برجسته جهانی کوروش یغمایی بنیان‌گذار موسیقی راک در ایران است؛ و همگام با پیشروان این موزیک در جهان، گروه‌های رولینگ استونز و بیتلز و… این موزیک را، درایران معرفی و شناساند. با تکیه برهمین پیشینه، او را پدر راک ایران لقب دادند.
+              | برپایه شناخت جایگاه کوروش خانم پاولین کازوبون کارگردان و خبرنگار و به ویژه پژوهش گر تاریخچه موزیک ملل به کورش لقب (آفریننده افسانه‌ای) را داده‌است. کوروش یغمایی در ۳۹ سال گذشته ۲۹ سال ممنوع‌الکار بوده‌است و هم‌اکنون نیز در ممنوعیت بسر می‌برد.
+              | او در فراگیری زمینه‌های گوناگون موزیک هیچگاه استادی نداشته‌است.
+          .jAudio--playlist
+          .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+            div(data-role='navbar')
+              .jAudio--controls
+                ul
+                  li
+                    button.jAudio--control.jAudio--control-prev(data-action='prev')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-play(data-action='play')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-next(data-action='next')
+                      span
+    // /content
+    .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+      div(data-role='navbar')
+    script(src='resources/js/jaudio.min.js')
+    script(src='resources/js/18.js')

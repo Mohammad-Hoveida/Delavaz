@@ -1,0 +1,88 @@
+doctype html
+html
+  head
+    title دل آواز
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon' href='/images/icon.png')
+    link(rel='icon' href='/images/icon.png')
+    link(rel='stylesheet' href='css/jquery.mobile-1.4.5.min.css')
+    script(src='js/jquery.js')
+    script(src='js/jquery.mobile-1.4.5.min.js')
+    link(rel='stylesheet' type='text/css' href='resources/css/main.min.css')
+    link(rel='stylesheet' href='css/jquery.toast.css')
+    script(type='text/javascript' src='js/jquery.toast.js')
+    link(rel='stylesheet' href='css/font.css')
+    link(rel='stylesheet' href='css/Style.css')
+  body(data-theme='b')
+    #p2.p2(data-role='page')
+      div(data-role='header' data-theme='b' data-position='fixed')
+        img.head(src='images/head.png' alt='')
+        a.ui-btn.ui-corner-all.ui-shadow.ui-icon-bars.ui-btn-icon-grid.ui-btn-icon-notext(href='#panel-overlay')
+      #panel-overlay(data-role='panel' data-display='overlay')
+        ul(data-role='listview')
+          img.panel(src='images/panel.png')
+          li(data-icon='info')
+            a(href='/main.jade' data-transition='slide' style='text-align: center;border: none;') صفحه اصلی
+          li(data-icon='info')
+            a(href='/bio.jade' data-transition='slide' style='text-align: center;border: none;') زندگی نامه
+          li(data-icon='info')
+            a(href='/aboutus.jade' data-transition='slide' style='text-align: center;border: none;') در باره ما
+          li(data-icon='phone')
+            a(href='https://www.instagram.com/del.avaaz/' data-transition='slide' target='blank' style='text-align: center;border: none;') صفحه ی ما 
+        br
+        br
+      div(data-role='header')
+      // /header
+      .ui-content(role='main' style='padding:0;margin-top:-2px;')
+        script(type='text/javascript').
+          if(!#{internetStatus}){
+            $.toast({
+                heading: '<h3 class="h3">!دستگاه شما به اینترنت متصل نیست</h3>',
+                text: '<a class="a" href="" onclick="window.location=document.URL;" style="margin-right: 80px;margin-top: 5px;">تلاش مجدد</a>',
+                showHideTransition: 'fade',
+                icon: 'error',
+                hideAfter: false,
+                position: 'top-center',
+            })
+          }
+        .jAudio
+          audio
+          .jAudio--ui
+            .jAudio--thumb
+            .jAudio--status-bar
+              .jAudio--details
+              .jAudio--volume-bar
+              .jAudio--progress-bar
+                .jAudio--progress-bar-wrapper
+                  .jAudio--progress-bar-played
+                    span.jAudio--progress-bar-pointer
+              .jAudio--time
+                span.jAudio--time-elapsed 00:00
+                span.jAudio--time-total 00:00
+          .bio(data-role='collapsible')
+            h3 زندگی نامه
+            p
+              | عبدالحسن ستّارپور مشهور به ستّار (زادهٔ ۱۳۲۸ در تهران)، خوانندهٔ موسیقی پاپ و سنتی ایرانی است.
+              | ستار با نام اصلی عبدالحسن ستارپور در ۲۸ آبان ماه ۱۳۲۸ در تهران متولد شد. او دوران کودکی و نوجوانی خود را در شهباز تهران گذراند. ستار تحصیلات خود را در دبستان و دبیرستان اقبال به اتمام رساند و کارشناسی را در رشتهٔ اقتصاد بین‌المللی از مدرسه عالی بازرگانی که در حال حاضر معروف به دانشکده اقتصاد دانشگاه علامه طباطبایی است، گرفت. او به زمینه‌های مختلف هنری و ورزشی به خصوص فوتبال علاقه‌مند بود و در تیم‌های فوتبال بازی می‌کرد. حتی بعدها در جوانی و میان‌سالی نیز علاقه‌مند و پیگیر فوتبال بوده و کاپیتان تیم فوتبال هنرمندان نیز گردید.
+              | استعداد ستار و مهارت او در موسیقی سنتی و پاپ ایرانی به او کمک کرد تا به یکی از محبوب‌ترین چهره‌های موسیقی ایران تبدبل شود. محبوبیت ستار در سن ۲۲ سالگی با خواندن ترانهٔ خانه به دوش که بر اساس سریال خانه‌به‌دوش (مراد برقی) به کارگردانی و بازیگری پرویز کاردان بود آغاز گشت. بعدها ستار ترانه‌های بسیاری از برنامه‌های رادیویی و تلویزیونی را خواند و جزء خوانندگان خانوادهٔ سلطنتی ایران گشت. ستار، گوگوش، هایده و مهستی از جمله نخستین خوانندگانی بودند که پیش از انقلاب به‌طور رسمی از سوی دولت پادشاهی برای اجرای برنامه به کشورهای دیگر فرستاده شدند و بعد از آن حمیرا نیز به آنها پیوست. در طول تمام مدت انقلاب و تاکنون، ستار تنها خوانندهٔ ایرانی است که هنوز به دربارها و جشن‌های رسمی دولت‌های دیگر دعوت می‌شود. ستار اولین خوانندهٔ ایرانی بود که با خوانندگان کشورهای دیگر در یک سالن برنامه اجرا کرد که از مهم‌ترین این برنامه‌ها، می‌توان به کنسرت ستار با گروه بانی ام در دههٔ هشتاد و در شهر لندن اشاره نمود. از دیگر فعالیت‌های بین‌المللی ستار، ضبط یک آلبوم با خوانندهٔ اسرائیلی عیدان رایخل است.
+              | ستار پس از خروج از ایران، عموماً به موسیقی‌های با ریتم آرام روی آورد. همکاری او با آهنگساز سرشناس ایرانی صادق نوجوکی، سبب تولید آثاری متفاوت همچون «سپید و سیاه»، «عروسی»، «آشتی»، «گل ناز» و… با صدای او و همچنین دو آلبوم، با نام‌های «گلایه»(۲۰۰۱) و «گل‌بانو»(۲۰۰۶) که آلبوم‌های سال وی نیز به‌شمار می‌روند، شد.
+          .jAudio--playlist
+          .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+            div(data-role='navbar')
+              .jAudio--controls
+                ul
+                  li
+                    button.jAudio--control.jAudio--control-prev(data-action='prev')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-play(data-action='play')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-next(data-action='next')
+                      span
+    // /content
+    .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+      div(data-role='navbar')
+    script(src='resources/js/jaudio.min.js')
+    script(src='resources/js/17.js')

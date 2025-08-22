@@ -1,0 +1,18 @@
+
+@font-face {
+    font-family: "yekan";
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/yekan/yekan-regular.eot') format("embedded-opentype"),
+	url('../fonts/yekan/yekan-regular.woff') format("woff"),
+	url('../fonts/yekan/yekan-regular.ttf') format("truetype");
+}
+@font-face {
+    font-family: "irans";
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/IRANSans_Bold.ttf') format("truetype");
+}
+body{
+	font-family: "irans",tahoma !important;
+}

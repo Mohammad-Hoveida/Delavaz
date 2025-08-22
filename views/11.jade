@@ -1,0 +1,94 @@
+doctype html
+html
+  head
+    title دل آواز
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon' href='/images/icon.png')
+    link(rel='icon' href='/images/icon.png')
+    link(rel='stylesheet' href='css/jquery.mobile-1.4.5.min.css')
+    script(src='js/jquery.js')
+    script(src='js/jquery.mobile-1.4.5.min.js')
+    link(rel='stylesheet' type='text/css' href='resources/css/main.min.css')
+    link(rel='stylesheet' href='css/jquery.toast.css')
+    script(type='text/javascript' src='js/jquery.toast.js')
+    link(rel='stylesheet' href='css/font.css')
+    link(rel='stylesheet' href='css/Style.css')
+  body(data-theme='b')
+    #p2.p2(data-role='page')
+      div(data-role='header' data-theme='b' data-position='fixed')
+        img.head(src='images/head.png' alt='')
+        a.ui-btn.ui-corner-all.ui-shadow.ui-icon-bars.ui-btn-icon-grid.ui-btn-icon-notext(href='#panel-overlay')
+      #panel-overlay(data-role='panel' data-display='overlay')
+        ul(data-role='listview')
+          img.panel(src='images/panel.png')
+          li(data-icon='info')
+            a(href='/main.jade' data-transition='slide' style='text-align: center;border: none;') صفحه اصلی
+          li(data-icon='info')
+            a(href='/bio.jade' data-transition='slide' style='text-align: center;border: none;') زندگی نامه
+          li(data-icon='info')
+            a(href='/aboutus.jade' data-transition='slide' style='text-align: center;border: none;') در باره ما
+          li(data-icon='phone')
+            a(href='https://www.instagram.com/del.avaaz/' data-transition='slide' target='blank' style='text-align: center;border: none;') صفحه ی ما 
+        br
+        br
+      div(data-role='header')
+      // /header
+      .ui-content(role='main' style='padding:0;margin-top:-2px;')
+        script(type='text/javascript').
+          if(!#{internetStatus}){
+            $.toast({
+                heading: '<h3 class="h3">!دستگاه شما به اینترنت متصل نیست</h3>',
+                text: '<a class="a" href="" onclick="window.location=document.URL;" style="margin-right: 80px;margin-top: 5px;">تلاش مجدد</a>',
+                showHideTransition: 'fade',
+                icon: 'error',
+                hideAfter: false,
+                position: 'top-center',
+            })
+          }
+        .jAudio
+          audio
+          .jAudio--ui
+            .jAudio--thumb
+            .jAudio--status-bar
+              .jAudio--details
+              .jAudio--volume-bar
+              .jAudio--progress-bar
+                .jAudio--progress-bar-wrapper
+                  .jAudio--progress-bar-played
+                    span.jAudio--progress-bar-pointer
+              .jAudio--time
+                span.jAudio--time-elapsed 00:00
+                span.jAudio--time-total 00:00
+          .bio(data-role='collapsible')
+            h3 زندگی نامه
+            p
+              | شادمهر عقیلی (زادهٔ ۷ بهمن ۱۳۵۱ در تهران)، خواننده، آهنگساز، تنظیم‌کننده، نوازنده، ترانه‌سرا و بازیگر ایرانی است که با انتشار چند آلبوم موسیقی در ایران کار خود را آغاز کرد. وی پس از مدتی ابتدا به کانادا و سپس به ایالات متحدهٔ آمریکا مهاجرت کرد.
+              | شادمهر در یک خانواده شش نفره در تهران متولد شد. سه برادر به نام‌های حمید، محمد تقی و محمد علی و یک خواهر به اسم پروین داشت که از این سه برادر، یکی از آن‌ها حین خدمت سربازی و یکی از آن‌ها در زلزلهٔ رودبار فوت شدند. محمد تقی نیز در سال ۹۲ درگذشت. پدرش نیز در دوران نوجوانی شادمهر درگذشت. نام پدر وی علیقلی و مادر وی که هم‌اکنون مقیم ایران است عاصفه است . شادمهر از کودکی با دیدن سازهای موسیقی به این رشته هنری علاقمند شد.
+              | در سال ۱۳۷۶ از هنرستان موسیقی به اتفاق یک گروه به واحد موسیقی صداوسیما رفت. فؤاد حجازی هم جزو آن گروه بود. در همان‌جا بود که با خشایار اعتمادی و علیرضا عصار آشنا شد. اولین آلبوم بدون کلام او به نام «بهار من» که تنظیمی جدید از قطعات قدیمی بود مورد استقبال قرار گرفت و هم‌زمان همکاری خود را با صداوسیما آغاز کرد.
+              | در همین سال‌ها که جوانه‌های موسیقی پاپ تازه شروع به رویش کرده بودند، اولین کار شادمهر با نام «معبود» با صدای خودش بارها از شبکه‌های ایران پخش شد. بزرگترها حتماً بخش‌های معروف این ترانه هنوز یادشان مانده که می‌گفت: «اگر روزی رسد دستم به دامانت، کنم جان را به قربانت، ولی بی لطف و احسانت چگونه…».
+              | تب شادمهر به مرور بالا گرفت و انتشار آلبوم «دهاتی» آغازگر موجی بود که همه موسیقی پاپ بعد از انقلاب را تحت تأثیر قرار داد. این آلبوم همچنان رکورد فروش آلبوم موسیقی را با بیش از دو و نیم میلیون نسخه فروش در اختیار دارد و انتشار آثار بعدی اش باعث شد «شادمهر عقیلی» به ابرقدرتی در حوزه موسیقی (اواخر دهه هفتاد) تبدیل شود.
+              | او بعد از انتشار چند آلبوم موفق و انتشار قطعاتی چون «گل یاس» (که به فاطمه زهرا تقدیم شده بود)، توانست نگاه تندروهای مذهبی را هم به سمت آثارش جلب کند. آخرین فعالیت رسمی شادمهر در ایران حضور در فیلم سینمایی «پر پرواز» بود. نقش خواننده‌ای که مجوز انتشار آثارش صادر نمی‌شود و قصد مهاجرت به خارج از کشور را دارد.
+              | سرانجام شادمهر در سال ۱۳۸۰ قبل از اکران فیلم شب برهنه ایران را ترک کرد و فعالیت‌هایش را در کانادا و سپس آمریکا ادامه داد.
+              | او از ۱۳۷۶ وارد واحد موسیقی صدا و سیما شد و در آنجا مشغول به کار شد ولی کارهایش برای کسب مجوز مشکل داشتند. به‌عنوان اولین کار «معبود» و سپس «فصل آشنایی» را اجرا کرد و بعد از آن آلبوم بهار من اولین کاست او بود. بهار من آلبوم بدون کلامی شامل ترانه‌های قدیمی مانند «گل گندم» و «بهار من»، «جان مریم» و… بود که شادمهر تنظیم و نوازندگی پیانو، گیتار و ویلون را در آن به عهده داشت. او در آلبومی به نام «فصل آشنایی» که کارهای دیگر خوانندگان پاپ آن روزگاران در ایران، هم در آن جای داشت سه آهنگ به نام‌های «باغ زندگی» به همراهی علیرضا عصار «معبود» و «فصل آشنایی» را ارائه کرد. سپس در آلبومی به نام «نازنین» باز هم به همراهی دیگر خوانندگان، دو آهنگ «قفس» و «تا بی‌نهایت شب» را ارائه کرد.
+              | آلبوم دوم شادمهر عقیلی که در واقع اولین آلبوم با کلام او محسوب می‌شود به نام مسافر در سال ۱۳۷۷ با همراهی و همفکری بهروز صفاریان توسط شرکت فرهنگی هنری «پیغام سحر» به بازار آمد که با استقبال بسیار زیادی روبرو شد. این آلبوم یکی از پر فروش‌ترین آلبومهای بعد از انقلاب بود که در دهه ۷۰ وارد بازار شد.
+              | شادمهر عقیلی تعدادی از معروف‌ترین ترانه‌های نیلوفر لاری پور را خوانده‌است. از دیگر ترانه‌سرایان همکار وی می‌توان به مونا برزویی، سعید مقدم خواهر زاده، شاهکار بینش پژوه، فرید احمدی، شیدا شفیعی پور، محمدعلی بهمنی، محسن شیرالی، پاکسیما زکی‌پور، آزیتا قاسمی، صمد وفایی، فرزاد حسنی، بابک روزبه و یغما گلرویی و آرش مهرابی اشاره کرد. ضمن اینکه برای مهستی آهنگ‌ها و تنظیم‌های آلبوم از خدا خواسته را انجام داده‌است. ابی، ناصر عبداللهی، جمشید، بهبود، مهران احراری، شروین، ایلیا منفرد، حمید غلامعلی، علیرضا عصار، احسان خواجه امیری، محمد اصفهانی، حسین زمان، لیلا فروهر، سعید شهروز، علی لهراسبی و مهستی از جمله خوانندگانی هستند که شادمهر کار آهنگ‌سازی برخی آثارشان را عهده‌دار بوده‌است. همچنین با ابی نیز همکاری کرده و آهنگ‌های بدبین و نوازش و همین خوبه را برای او ساخته‌است. در این آهنگ‌ها صدای گیتار و پیانوی شادمهر شنیده می‌شود. همچنین بهروز صفاریان، مهران جمالی راد، محمد ناهیدی، افشین خواجه نژاد، آرون حسینی، میلاد هاشمی، سعید زمانی و … همکاران شادمهر در بخش تنظیم موسیقی آثار منتشر شده شادمهر بوده‌اند. از افرادی که عهده‌دار آهنگسازی برخی از آثار شادمهر بوده‌اند می‌توان به محمد رضا چراغعلی (آلبوم پر پرواز)، بهروز صفاریان (آلبوم مسافر و دهاتی)، سروش طهماسبی (ترانهٔ ژینا)، محمد ناهیدی (ترانهٔ خیلیا)، اشکان خشایی (ترانهٔ فقط با تو عشقم) و وحید پویان (آلبوم‌های تجربه کن و تصویر) اشاره کرد.
+          .jAudio--playlist
+          .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+            div(data-role='navbar')
+              .jAudio--controls
+                ul
+                  li
+                    button.jAudio--control.jAudio--control-prev(data-action='prev')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-play(data-action='play')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-next(data-action='next')
+                      span
+    // /content
+    .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+      div(data-role='navbar')
+    script(src='resources/js/jaudio.min.js')
+    script(src='resources/js/11.js')

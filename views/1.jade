@@ -1,0 +1,89 @@
+doctype html
+html
+  head
+    title دل آواز
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon' href='/images/icon.png')
+    link(rel='icon' href='/images/icon.png')
+    link(rel='stylesheet' href='css/jquery.mobile-1.4.5.min.css')
+    script(src='js/jquery.js')
+    script(src='js/jquery.mobile-1.4.5.min.js')
+    link(rel='stylesheet' type='text/css' href='resources/css/main.min.css')
+    link(rel='stylesheet' href='css/jquery.toast.css')
+    script(type='text/javascript' src='js/jquery.toast.js')
+    link(rel='stylesheet' href='css/font.css')
+    link(rel='stylesheet' href='css/Style.css')
+  body(data-theme='b')
+    #p2.p2(data-role='page')
+      div(data-role='header' data-theme='b' data-position='fixed')
+        img.head(src='images/head.png' alt='')
+        a.ui-btn.ui-corner-all.ui-shadow.ui-icon-bars.ui-btn-icon-grid.ui-btn-icon-notext(href='#panel-overlay')
+      #panel-overlay(data-role='panel' data-display='overlay')
+        ul(data-role='listview')
+          img.panel(src='images/panel.png')
+          li(data-icon='info')
+            a(href='/main.jade' data-transition='slide' style='text-align: center;border: none;') صفحه اصلی
+          li(data-icon='info')
+            a(href='/bio.jade' data-transition='slide' style='text-align: center;border: none;') زندگی نامه
+          li(data-icon='info')
+            a(href='/aboutus.jade' data-transition='slide' style='text-align: center;border: none;') در باره ما
+          li(data-icon='phone')
+            a(href='https://www.instagram.com/del.avaaz/' data-transition='slide' target='blank' style='text-align: center;border: none;') صفحه ی ما 
+        br
+        br
+      .ui-content(role='main' style='padding:0;margin-top:-2px;')
+         script(type='text/javascript').
+          if(!#{internetStatus}){
+            $.toast({
+                heading: '<h3 class="h3">!دستگاه شما به اینترنت متصل نیست</h3>',
+                text: '<a class="a" href="" onclick="window.location=document.URL;" style="margin-right: 80px;margin-top: 5px;">تلاش مجدد</a>',
+                showHideTransition: 'fade',
+                icon: 'error',
+                hideAfter: false,
+                position: 'top-center',
+            })
+          }
+        .jAudio
+          audio
+          .jAudio--ui
+            .jAudio--thumb
+            .jAudio--status-bar
+              .jAudio--details
+              .jAudio--volume-bar
+              .jAudio--progress-bar
+                .jAudio--progress-bar-wrapper
+                  .jAudio--progress-bar-played
+                    span.jAudio--progress-bar-pointer
+              .jAudio--time
+                span.jAudio--time-elapsed 00:00
+                span.jAudio--time-total 00:00
+          .bio(data-role='collapsible')
+            h3 زندگی نامه
+            p
+              | نصرالله معین نجف‌آبادی با نام هنری معین (زادهٔ ۲۹ دی ۱۳۳۰ در نجف‌آباد استان اصفهان)، خوانندهٔ سرشناس موسیقی سنتی و پاپ ایرانی ساکن لس‌آنجلس است.
+              | معین در روز جمعه ۲۹ دیماه سال ۱۳۳۰ در نجف آباد واقع در استان اصفهان در خانواده‌ای کاملاً مذهبی و از نظر مالی در سطح متوسط و پرجمعیت به دنیا آمد. معین هفتمین فرزند خانواده اش است. او در دوران نوجوانی و جوانی قرآن را با صوت و اشعار و غزلیات شعرای بزرگ را می‌خواند. او در همان دوران با دوستان خود در مجالس شادمانی برنامه‌های بسیاری در شهر خود و دیگر شهرهای استان اصفهان اجرا می‌کرد. وی از دوران کودکی علاقه خود را به آواز نشان داد. معین در سن ۱۸ سالگی مدتی نزد استادان موسیقی ایرانی همچون تاج اصفهانی و حسن کسایی به یادگیری گوشه‌ها و دستگاه‌های آواز ایرانی پرداخت. از سال ۱۳۴۹ تا ۱۳۵۷ در رادیو اصفهان و هتل عباسی اصفهان و کاباره هزار و یک شب به اجرای برنامه مشغول شد.
+              | معین نخستین ترانه خود را در سال ۱۳۵۷ درتهران با عنوان «یکی را دوست می‌دارم» روانه دنیای موسیقی کرد. «یکی را دوست می‌دارم» با ترانه‌ای از مسعود امینی و آهنگی از معین آن چنان در میان مردم جا باز کرد که پس از مدتی کوتاه از مرزهای ایران گذشت و توسط خوانندگان ایرانی که پس از انقلاب به آمریکا مهاجرت کرده بودند هم خوانده شد. هایده، ابی و عارف از جمله معروف‌ترین این خوانندگان بودند. معین یک شبه راهی را که بسیاری برای آن سال‌ها کار کرده بودند پیمود و به آوازه خوانی نامی تبدیل شد.
+              | فعالیت جدی معین از سال‌های آغازین دهه ۱۳۶۰ خورشیدی در آمریکا آغاز شد. معین در سال ۱۳۶۰ نخستین آلبوم مستقل خود را با نام «می‌پرستم» (ناشر: شرکت ترانه) راهی بازار کرد. معین در طول دوران فعالیت خود با شماری از آهنگسازان موسیقی پاپ ایران همچون: صادق نوجوکی، محمد حیدری، کاظم عالمی، حسن شماعی زاده، منوچهر چشم آذر، فرید زلاند، آندرانیک، جهانبخش پازوکی و ترانه‌سرایان سرشناس مانند لیلا کسری، هما میرافشار و اردلان سرفراز همکاری و نیز با هایده همخوانی داشته‌است.
+              | معین پس از مهاجرت به آمریکا، با آهنگساز سرشناس ایرانی صادق نوجوکی آشنا شد که حاصل این آشنایی، آلبوم‌های «ننه (به تو می‌اندیشم)» و «خاطره ۷» و ترانه‌هایی همچون «طناز»، «ارباب وفا» و… است که در محبوبیت معین تأثیر چشم‌گیری داشته‌اند.
+              | معین در طول دوره فعالیت خود برنامه‌های گوناگونی را در سراسر جهان اجرا کرده‌است. از جمله کنسرت‌های موفق او می‌توان به کنسرت در یونیورسال آمفی تئاتر در لوس آنجلس در سال ۱۹۹۲ (به سرپرستی آندرانیک) اشاره کرد. در سال ۱۳۷۹ معین آلبوم «پرواز» را منتشر کرد و دو سال بعد آلبوم «لحظه‌ها» را روانه بازار کرد. در پاییز سال ۱۳۸۶، معین آلبوم «طلوع» را که حاصل همکاری او با بابک بیات، بابک صحرایی، فضل‌الله توکل، صادق نوجوکی، کاظم عالمی و بود منتشر ساخت. معین در ارائه کارهای عاشقانه و غمگین تبحر عجیبی دارد که به سوز و غم پنهان در صدایش مرتبط است. او علاوه بر محبوبیت کم‌نظیر در نزد ایرانیان، درکشورهای دیگر از جمله تاجیکستان پرآوازه است.
+              | معین چند سالی است که رویه کارش را را بر ارائه تک آهنگ گذاشته‌است؛ «شمال، سنگ خارا، همدم، مردم و…» از این ترانه‌ها هستند.
+          .jAudio--playlist
+          .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+            div(data-role='navbar')
+              .jAudio--controls
+                ul
+                  li
+                    button.jAudio--control.jAudio--control-prev(data-action='prev')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-play(data-action='play')
+                      span
+                  li
+                    button.jAudio--control.jAudio--control-next(data-action='next')
+                      span
+      .nav-glyphish-example(data-role='footer' data-theme='b' data-position='fixed')
+        div(data-role='navbar')
+    // /content
+    script(src='resources/js/jaudio.min.js')
+    script(src='resources/js/1.js')
