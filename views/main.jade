@@ -40,6 +40,9 @@ html
         br
       .ui-content(style='padding:0;margin-top:-2px;')
         script(type='text/javascript').
+          if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/service-worker.js");
+          }
           if(!#{internetStatus}){
             $.toast({
                 heading: '<h3 class="h3">!دستگاه شما به اینترنت متصل نیست</h3>',
