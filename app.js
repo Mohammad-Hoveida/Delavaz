@@ -32,6 +32,9 @@ app.get('/manifest.json', (req, res) => {
 app.get('/service-worker.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'service-worker.js'));
 });
+app.get('/app.js', (req, res) => {
+  res.sendFile(path.join(__dirname, 'app.js'));
+});
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/service-worker.js");
