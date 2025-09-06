@@ -4,10 +4,10 @@ self.addEventListener("install", (event) => {
       return cache.addAll([
         "/",
         "/index",
-        "/main",
+        "/main.jade",
         "/assets/css/jquery.mobile-1.4.5.min.css",
         "/assets/css/Style.css",
-        "/assets/css/fonts.css",
+        "/assets/css/font.css",
         "/app.js",
         "/assets/js/jquery.mobile-1.4.5.min.js",
         "/assets/js/jquery.js",
@@ -25,3 +25,4 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+
