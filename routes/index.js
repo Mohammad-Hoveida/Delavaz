@@ -3,11 +3,6 @@ var router = express.Router();
 var internetAvailable = require('internet-available');
 const file = require('fs');
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/service-worker.js");
-}
-
-
 // routes
 router.get("/index",(req,res)=>{
 
