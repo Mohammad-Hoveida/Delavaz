@@ -29,6 +29,10 @@ app.use(logger('dev'));
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/service-worker.js");
 }
+app.get('/manifest.json', (req, res) => {
+  res.sendFile(path.join(__dirname, 'manifest.json'));
+});
+
 
 // extra safety
 app.use(cookieParser());
