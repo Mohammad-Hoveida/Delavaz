@@ -26,13 +26,16 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 
 //service-worker
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/service-worker.js");
-}
 app.get('/manifest.json', (req, res) => {
   res.sendFile(path.join(__dirname, 'manifest.json'));
 });
+app.get('/service-worker.json', (req, res) => {
+  res.sendFile(path.join(__dirname, 'service-worker.json'));
+});
 
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/service-worker.js");
+}
 
 // extra safety
 app.use(cookieParser());
