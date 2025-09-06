@@ -8,7 +8,6 @@ self.addEventListener("install", (event) => {
         "/assets/css/jquery.mobile-1.4.5.min.css",
         "/assets/css/Style.css",
         "/assets/css/font.css",
-        "/app.js",
         "/assets/js/jquery.mobile-1.4.5.min.js",
         "/assets/js/jquery.js",
         "/assets/images/icon.png",
@@ -25,4 +24,5 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+
 
