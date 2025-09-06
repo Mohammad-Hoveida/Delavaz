@@ -5,13 +5,13 @@ self.addEventListener("install", (event) => {
         "/",
         "/index",
         "/main.jade",
-        "/assets/css/jquery.mobile-1.4.5.min.css",
-        "/assets/css/Style.css",
-        "/assets/css/font.css",
-        "/assets/js/jquery.mobile-1.4.5.min.js",
-        "/assets/js/jquery.js",
-        "/assets/images/icon.png",
-        "/assets/images/splash.png"
+        "/css/jquery.mobile-1.4.5.min.css",
+        "/css/Style.css",
+        "/css/font.css",
+        "/js/jquery.mobile-1.4.5.min.js",
+        "/js/jquery.js",
+        "/images/icon.png",
+        "/images/splash.png"
       ]);
     })
   );
@@ -24,5 +24,6 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+
 
 
