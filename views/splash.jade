@@ -17,7 +17,7 @@ html(lang='en')
         navigator.serviceWorker.register("/service-worker.js");
       }
 
-        function showSnackBar() {
+      function showSnackBar() {
             if (!#{internetStatus}){
                 var x = document.getElementById("snackbar");
                 x.className = "show";
