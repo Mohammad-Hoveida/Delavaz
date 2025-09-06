@@ -18,7 +18,6 @@ app.use((request, res, next) => {
   next();
 });
 
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -26,10 +25,16 @@ app.set('view engine', 'jade');
 // logging
 app.use(logger('dev'));
 
+//service-worker
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/service-worker.js");
+}
+
 // extra safety
 app.use(cookieParser());
 app.use(session({ secret: 'delavazsupersecret', saveUninitialized: true, resave: true }));
 app.use(express.static(path.join(__dirname, 'assets')));
+
 // index
 app.use('/', indexRouter);
 
