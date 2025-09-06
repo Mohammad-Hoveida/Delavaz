@@ -1,0 +1,89 @@
+doctype html
+html(lang="fa")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    // --- PWA essentials ---
+    link(rel="manifest" href="/manifest.json")
+    meta(name="theme-color" content="#2d3436")
+    meta(name="mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+
+    // Icons (مطمئن شو این فایل‌ها واقعا وجود دارند)
+    link(rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png")
+    link(rel="icon" type="image/png" sizes="512x512" href="/images/icon-512.png")
+    link(rel="apple-touch-icon" href="/images/icon-192.png")
+
+    // CSS های پروژه
+    link(rel="stylesheet" href="/css/font.css")
+    link(rel="stylesheet" href="/css/jquery.toast.css")
+
+    title #{title || 'delavaz'}
+
+    // استایل کوچک اسنک‌بار (اگر خواستی ببرش توی css اصلی)
+    style.
+      #snackbar {
+        visibility: hidden;
+        min-width: 210px;
+        margin-left: -105px;
+        background-color: #fff;
+        color: #c0392b;
+        text-align: center;
+        border-radius: 5px;
+        padding: 8px;
+        position: fixed;
+        z-index: 9999;
+        left: 50%;
+        bottom: 30px;
+      }
+      #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      }
+      @-webkit-keyframes fadein { from {bottom:0;opacity:0} to {bottom:30px;opacity:1} }
+      @keyframes fadein { from {bottom:0;opacity:0} to {bottom:30px;opacity:1} }
+      @-webkit-keyframes fadeout { from {bottom:30px;opacity:1} to {bottom:0;opacity:0} }
+      @keyframes fadeout { from {bottom:30px;opacity:1} to {bottom:0;opacity:0} }
+
+    // ثبت Service Worker یک‌بار برای همه‌ی صفحات
+    script.
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(function (reg) { console.log('SW registered:', reg.scope); })
+            .catch(function (err) { console.log('SW registration failed:', err); });
+        });
+      }
+
+    // بلاک اختیاری برای متا/استایل‌های صفحه‌های خاص
+    block head
+
+  body
+    // اسنک‌بار سراسری
+    #snackbar اینترنت در دسترس نیست
+
+    // محتوای هر صفحه اینجاست
+    block content
+
+    // JS های پروژه (ترتیب درست)
+    script(src="/js/jquery.js")
+    script(src="/js/jquery.toast.js")
+
+    // هندل ساده قطع اینترنت (سراسری)
+    script.
+      (function () {
+        var bar = document.getElementById('snackbar');
+        function show(msg) {
+          if (!bar) return;
+          bar.textContent = msg || 'اینترنت در دسترس نیست';
+          bar.className = 'show';
+          setTimeout(function () { bar.className = bar.className.replace('show', ''); }, 3000);
+        }
+        window.addEventListener('offline', function(){ show(); });
+      })();
+
+    // بلاک اختیاری برای اسکریپت‌های اختصاصی هر صفحه
+    block scripts
