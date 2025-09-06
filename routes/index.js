@@ -3,8 +3,19 @@ var router = express.Router();
 var internetAvailable = require('internet-available');
 const file = require('fs');
 
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/service-worker.js");
+}
+
+
 // routes
 router.get("/index",(req,res)=>{
+
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js");
+    }
+
+    
     internetAvailable({
         domainName: "google.com",
         port: 53,
@@ -54,6 +65,10 @@ router.get("/index",(req,res)=>{
 
 // index route
 router.get("/",(req,res)=>{
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js");
+    }
+
     internetAvailable({
         domainName: "google.com",
         port: 53,
@@ -69,6 +84,12 @@ router.get("/",(req,res)=>{
 })
 
 router.get("/main.jade",(req,res)=>{
+
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js");
+    }
+
+    
     internetAvailable({
         domainName: "google.com",
         port: 53,
